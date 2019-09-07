@@ -1,28 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head><link rel="stylesheet" href="styles.css">
-    <meta charset="utf-8">
+<html lang="en">
+<head><link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nanu Clicker</title>
-  </head>
-  <body>
-    <div id"parent" class="main">
-     <div id="child" style="text-align:center;">
-      <h1 id="nanuMined">0 Nanuchundris</h1>
-      <button class="button2" onclick="mineNanu()">Recoger Nanuchundris</button>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Cabecera -->
+        <div class="header">
+          <h1>Nanu Clicker</h1>
+        </div>     
+        <!-- Columna Izquierda -->
+        <div class="left" style="text-align:center">
+                <h2 >Tienda</h2>
+                <button id="upgrade0" class="button" onclick="buyUpgrade0()">
+                  0 Nanus/s, Costo: 15 Nanus</button>
+                <button id="upgrade1" class="button" onclick="buyUpgrade1()">
+                  0 Nanus/s, Costo: 100 Nanus</button>
+                <button id="upgrade2" class="button" onclick="buyUpgrade2()">
+                  0 Nanus/s, Costo: 1100 Nanus</button>
+                <button id="upgrade3" class="button" onclick="buyUpgrade3()">
+                  0 Nanus/s, Costo: 12000 Nanus</button>
+                <button id="upgrade4" class="button" onclick="buyUpgrade4()">
+                  0 Nanus/s, Costo: 130000 Nanus</button>
+                <button id="upgrade5" class="button" onclick="buyUpgrade5()">
+                  0 Nanus/s, Costo: 1400000 Nanus</button>
+                <button id="upgrade6" class="button" onclick="buyUpgrade6()">
+                  0 Nanus/s, Costo: 20000000 Nanus</button>
+                <button id="upgrade7" class="button" onclick="buyUpgrade7()">
+                  0 Nanus/s, Costo: 330000000 Nanus</button>
+                <button id="upgrade8" class="button" onclick="buyUpgrade8()">
+                  0 Nanus/s, Costo: 5100000000 Nanus</button>
+        </div>
+        <!-- Columna Central-->
+        <div class="middle" style="text-align:center">
+            <div class="middlecenter">
+            <h1 id="nanuMined">0 Nanus</h1>
+            <button class="button1" onclick="mineNanu()">Recoger Nanus</button>
+            <h2 id="secondnanus">Total: 0 Nanus/s</h2>
+            </div>
+        </div>  
+        <!-- Columna Derecha -->
+        <div class="right" style="text-align:center;background-color: rgba(0, 84, 63, 1)">
+            <h2>¿Cómo Jugar?</h2>
+            <p>Recoge Nanus para comprar mejoras, las cuales te ayudaran a progresar más rápido,
+                hasta comprarlas todas.
+            </p>
+        </div>
+        <!-- Pie de Pagina -->
+        <div class="footer">
+          <p style="text-align: center">Creado por Zenikee</p>
+          <p style="text-align: center">Arte: Nanuchris</p>
+        </div>
       </div>
-    </div>
-    <div class="menu" style="text-align:center;">
-      <h2 >Tienda</h2>
-      <button class="button" onclick="">Mejora 1</button>
-      <button class="button" onclick="">Mejora 2</button>
-      <button class="button" onclick="">Mejora 3</button>
-      <button class="button" onclick="">Mejora 4</button>
-      <button class="button" onclick="">Mejora 5</button>
-      <button class="button" onclick="">Mejora 6</button>
-      <button class="button" onclick="">Mejora 7</button>
-      <button class="button" onclick="">Mejora 8</button>
-      <button class="button" onclick="">Mejora 9</button>
-    </div>
-    <script src="main.js" charset="utf-8" type="text/javascript"></script>
-  </body>
+      <script src="main.js" charset="utf-8" type="text/javascript"></script>
+</body>
 </html>
