@@ -69,9 +69,9 @@ function buyUpgrade2() {
 		nanuUpgradeTotal[2] += 1;
 		nanuUpgradeCost[2] *= 1.15 ** nanuUpgradeTotal[2];
 		update('nanuMined', round(nanu, 1) + ' Nanus Recogidos');
-		update('total2', 'Total: ' + nanuUpgradeTotal[0] + ' |');
-		update('costo2', 'Costo: ' + Math.floor(nanuUpgradeCost[0]) + ' |');
-		update('produce2', 'Produce: ' + round(nanuPerSecond[0], 1) + 'NpS');
+		update('total2', 'Total: ' + nanuUpgradeTotal[2] + ' |');
+		update('costo2', 'Costo: ' + Math.floor(nanuUpgradeCost[2]) + ' |');
+		update('produce2', 'Produce: ' + round(nanuPerSecond[2], 1) + 'NpS');
 	}
 }
 
