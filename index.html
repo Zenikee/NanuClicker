@@ -1,60 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="styles.css">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Nanu Clicker</title>
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+            $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();
+            });
+    </script>
 </head>
 <body>
-    <div class="grid-container">
-        <!-- Cabecera -->
-        <div class="header">
-          <h1>Nanu Clicker</h1>
-        </div>     
-        <!-- Columna Izquierda -->
-        <div class="left" style="text-align:center">
-                <h2 >Tienda</h2>
-                <button id="upgrade0" class="button" onclick="buyUpgrade0()">
-                  0 Nanus/s, Costo: 15 Nanus</button>
-                <button id="upgrade1" class="button" onclick="buyUpgrade1()">
-                  0 Nanus/s, Costo: 100 Nanus</button>
-                <button id="upgrade2" class="button" onclick="buyUpgrade2()">
-                  0 Nanus/s, Costo: 1100 Nanus</button>
-                <button id="upgrade3" class="button" onclick="buyUpgrade3()">
-                  0 Nanus/s, Costo: 12000 Nanus</button>
-                <button id="upgrade4" class="button" onclick="buyUpgrade4()">
-                  0 Nanus/s, Costo: 130000 Nanus</button>
-                <button id="upgrade5" class="button" onclick="buyUpgrade5()">
-                  0 Nanus/s, Costo: 1400000 Nanus</button>
-                <button id="upgrade6" class="button" onclick="buyUpgrade6()">
-                  0 Nanus/s, Costo: 20000000 Nanus</button>
-                <button id="upgrade7" class="button" onclick="buyUpgrade7()">
-                  0 Nanus/s, Costo: 330000000 Nanus</button>
-                <button id="upgrade8" class="button" onclick="buyUpgrade8()">
-                  0 Nanus/s, Costo: 5100000000 Nanus</button>
-        </div>
-        <!-- Columna Central-->
-        <div class="middle" style="text-align:center">
-            <div class="middlecenter">
-            <h1 id="nanuMined">0 Nanus</h1>
-            <button class="button1" onclick="mineNanu()">Recoger Nanus</button>
-            <h2 id="secondnanus">Total: 0 Nanus/s</h2>
+    <div class="container-fluid">
+            <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                  
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title">Opciones</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                  
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                          Todavia no hay ninguna :(
+                        </div>
+                  
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                  
+                      </div>
+                    </div>
             </div>
-        </div>  
-        <!-- Columna Derecha -->
-        <div class="right" style="text-align:center;background-color: rgba(0, 84, 63, 1)">
-            <h2>¿Cómo Jugar?</h2>
-            <p>Recoge Nanus para comprar mejoras, las cuales te ayudaran a progresar más rápido,
-                hasta comprarlas todas.
-            </p>
-        </div>
-        <!-- Pie de Pagina -->
-        <div class="footer">
-          <p style="text-align: center">Creado por Zenikee</p>
-          <p style="text-align: center">Arte: Nanuchris</p>
-        </div>
-      </div>
-      <script src="main.js" charset="utf-8" type="text/javascript"></script>
+            <div class="row">
+                    <div class="col text-center">
+                        <h1>Nanu Clicker</h1>
+                        <p>El peor juego incremental del año</p>
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-3 text-center"><h4>Tienda</h4></div>
+                    <div class="col-6">
+                            <marquee class="border rounded" behavior="scroll" direction="left">Umm, no sé que hacer con esto :v</marquee>
+                    </div>
+                    <div class="col-3 text-center"><h4>Mejoras</h4></div>
+            </div>
+            <div class="row">
+                    <div class="col text-center"  style="overflow-y: scroll;height: 70vh">
+                            <p>En la tienda puedes comprar construcciones que te ayudaran a recoger Nanus más rapido.</p>
+                            <h6 class="d-inline">Construcción 1:</h6>
+                            <button type="button" class="m-1 btn btn-secondary btn-sm" onclick="buyUpgrade0()">Comprar</button>
+                            <button type="button" class="m-1 btn btn-secondary btn-sm">Vender</button>
+                        <div class="progress" data-toggle="tooltip" title="La primera Construcción!">
+                            <div class="d-inline progress-bar progress-bar-striped progress-bar-animated bg-success" 
+                            style="width:40%"></div>
+                        </div>
+                        <ul class="list-inline">
+                                <li class="list-inline-item" id="total0">Total: 0 |</li>
+                                <li class="list-inline-item" id="costo0">Costo: 15 |</li>
+                                <li class="list-inline-item" id="produce0">Produce: 0 NpS</li>
+                        </ul>
+                        <div class="m-1"></div>
+                            <h6 class="d-inline">Construcción 2:</h6>
+                            <button type="button" class="m-1 btn btn-secondary btn-sm" onclick="buyUpgrade1()">Comprar</button>
+                            <button type="button" class="m-1 btn btn-secondary btn-sm">Vender</button>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:40%"></div>
+                        </div>
+                        <ul class="list-inline">
+                                <li class="list-inline-item" id="total1">Total: 0 |</li>
+                                <li class="list-inline-item" id="costo1">Costo: 110 |</li>
+                                <li class="list-inline-item" id="produce1">Produce: 0 NpS</li>
+                        </ul>
+                        <div class="m-1"></div>
+                            <h6 class="d-inline">Construcción 3:</h6>
+                            <button type="button" class="m-1 btn btn-secondary btn-sm" onclick="buyUpgrade2()">Comprar</button>
+                            <button type="button" class="m-1 btn btn-secondary btn-sm">Vender</button>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:40%"></div>
+                        </div>
+                        <ul class="list-inline">
+                                <li class="list-inline-item" id="total2">Total: 0 |</li>
+                                <li class="list-inline-item" id="costo2">Costo: 1100 |</li>
+                                <li class="list-inline-item" id="produce2">Produce: 0 NpS</li>
+                        </ul>
+                    </div>
+                    <div class="col align-self-center text-center">
+                        <h4 id="nanuMined">0 Nanus Recogidos</h4>
+                        <p id="secondNanus">0 Nanus por segundo</p>
+                    </div>
+                    <div class="col align-self-center text-center">
+                        <button id="mineNanu" type="button" class="btn btn-success" onclick="mineNanu()">Recoger Nanus</button>
+                    </div>
+                    <div class="col text-center">
+                            <button type="button" class="btn btn-info m-1">Mejora 1</button>
+                            <button type="button" class="btn btn-info m-1">Mejora 2</button>
+                            <button type="button" class="btn btn-info m-1">Mejora 3</button>
+                            <button type="button" class="btn btn-info m-1">Mejora 4</button>
+                            <button type="button" class="btn btn-info m-1">Mejora 5</button>
+                            <button type="button" class="btn btn-info m-1">Mejora 6</button>
+                            <button type="button" class="btn btn-info m-1">Mejora 7</button>
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col text-center">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Opciones</button>|</li>
+                            <li class="list-inline-item"><button type="button" class="btn btn-link"><a href="howtoplay.html">¿Cómo Jugar?</a></button>|</li>
+                            <li class="list-inline-item"><button type="button" class="btn btn-link"><a href="https://discord.gg/ZnWQng" target="_blank">Discord</a></button></li>
+                        </ul>
+                    </div>
+            </div>
+    </div>
 </body>
 </html>
